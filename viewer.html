@@ -2,13 +2,19 @@
 </script>
 
 <script>
-  
-  function getRandomArticle(){
-    var wikipediaRandomArticleAPI = 
-    $.getJSON()
+// link user input to searchQuery
+var searchQuery = "";
+
+$.ajax({
+  url: '//en.wikipedia.org/w/api.php',
+  data: { action: 'query', list: 'search', srsearch: searchQuery, format: 'json' },
+  dataType: 'jsonp',
+  success: function (x) {
+    // link html to search results in a list? 
+    // make a for loop
+    console.log('title', x.query.search[0].title);
   }
-
-
+});
 
 </script>
 
