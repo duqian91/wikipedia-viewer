@@ -1,27 +1,11 @@
-<script src="https://code.jquery.com/jquery-3.0.0.min.js">
-</script>
-
-<script>
-// link user input to searchQuery
-var searchQuery = "";
-
-$.ajax({
-  url: '//en.wikipedia.org/w/api.php',
-  data: { action: 'query', list: 'search', srsearch: searchQuery, format: 'json' },
-  dataType: 'jsonp',
-  success: function (x) {
-    // link html to search results in a list? 
-    // make a for loop
-    console.log('title', x.query.search[0].title);
-  }
-});
-
-</script>
+<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+<script src="main.js"></script>
 
 <body>
   <form>
     <input type="text">Search for wikipedia</input>
     <button type="submit">Submit</button>
   </form>
-  <a href="https://en.wikipedia.org/wiki/Special:Random">See a random page</a>
+  <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">See a random page</a>
+  <div id="display"></div>
 </body>
