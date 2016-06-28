@@ -18,10 +18,9 @@ $("#userQuery").keyup(function() {
       for (var i = 0; i < searchResult.length; i++) {
         // push to HTML result
         displayHTMLResult +=
-          "<h2>" +
+          "<div class= \"well\">" +
           "<a href=\"http://en.wikipedia.org/wiki/" + searchResult[i].title + "\" target=\"_blank\">" + searchResult[i].title + "</a>" +
-          "</h2>" +
-          "<p>" + searchResult[i].snippet + "</p>";
+          "</div>";
       }
       $("#display").html(displayHTMLResult);
     }
