@@ -2,7 +2,7 @@ $("#userQuery").keyup(function() {
   // get user input in realtime when user enters something
   var searchQuery = $("#userQuery").val();
   $.ajax({
-    url: '//en.wikipedia.org/w/api.php',
+    url: 'http://en.wikipedia.org/w/api.php',
     data: {
       action: 'query',
       list: 'search',
